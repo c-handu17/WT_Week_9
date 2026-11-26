@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Array Operations</title>
+</head>
+<body>
+    <h2>Array Operations</h2>
+    <div id="out"></div>
+
+    <script>
+        let numbers = [12, 25, 8, 40, 15];
+
+        let sum = 0;
+        let max = numbers[0];
+
+        for (let n of numbers) {
+            sum += n;
+
+            if (n > max) {
+                max = n;
+            }
+        }
+
+        numbers.push(30);
+
+        let result = "";
+        result += "Array: " + numbers.join(", ") + "<br>";
+        result += "Length: " + numbers.length + "<br>";
+        result += "First Element: " + numbers[0] + "<br>";
+        result += "Sum before adding 30: " + sum + "<br>";
+        result += "Max before adding 30: " + max;
+
+        document.getElementById("out").innerHTML = result;
+    </script>
+</body>
+</html>
